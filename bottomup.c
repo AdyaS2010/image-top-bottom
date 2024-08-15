@@ -1,4 +1,4 @@
-// Copies a BMP file (bmp.h)
+// Copies a BMP file
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -65,12 +65,32 @@ int main(int argc, char *argv[])
     // Determine padding for scanlines
     int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
 
-    // Close infile
-    fclose(inptr);
+    // Iterate over infile's scanlines
+    for (int i = 0, biHeight = abs(bi.biHeight); i < biHeight; i++)
+    {
+        // Iterate over pixels in scanline
+        for (int j = 0; j < bi.biWidth; j++)
+        {
+            // Temporary storage
+            RGBTRIPLE triple;
 
-    // Close outfile
-    fclose(outptr);
+            // Read RGB triple from infile
+            fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
 
+            // Write RGB triple to outfile
+            fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr);
+        }
+
+        // Skip over padding, if any
+        fseek(inptr, padding, SEEK_CUR);
+
+        // Then add it back (to demonstrate how)
+        for (int k = 0; k < padding; k++)
+        {
+            fputc(0x00, outptr);
+        }
+    }
+    
     // Success
     return 0;
 }
