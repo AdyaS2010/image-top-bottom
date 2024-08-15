@@ -1,4 +1,4 @@
-// Copies a BMP file
+// Copies a BMP file (bmp.h)
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -90,7 +90,13 @@ int main(int argc, char *argv[])
             fputc(0x00, outptr);
         }
     }
-    
+
+    // Close infile
+    fclose(inptr);
+
+    // Close outfile
+    fclose(outptr);
+
     // Success
     return 0;
 }
