@@ -4,7 +4,7 @@
 This project is a BMP file converter written in C. It reads an input BMP file, flips the image from bottom-up to top-down, and writes the flipped image to an output BMP file. The project incorporates the `bmp.h` file for BMP-related data types based on Microsoft's specifications.
 
 ## Features
-- Convert BMP files from bottom-up to top-down *I myself did not create the BMP.h file used in this Project, but utilized contents for demo of code*
+- Convert BMP files from bottom-up to top-down - *I myself did not create the BMP.h file used in this Project, but utilized contents for demo of code*
 - Ensure proper usage and file format validation
 - Allocate memory for image processing
 
