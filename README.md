@@ -34,6 +34,16 @@ This project is a BMP file converter written in C. It reads an input BMP file, f
 $ ./bottomup input.bmp output.bmp
 ```
 
+![image](https://github.com/user-attachments/assets/343daf3f-bb66-42c0-a6cf-284835395ea2)
+
+![image](https://github.com/user-attachments/assets/2323a7c3-1430-4d24-a88e-27dac7342c42)
+![image](https://github.com/user-attachments/assets/d22f4aca-0db1-4adc-8803-003d24841503)
+*Before!*
+
+![image](https://github.com/user-attachments/assets/2ad7154f-9fc5-4067-8d71-7722b4afd820)
+![image](https://github.com/user-attachments/assets/9af831af-922f-42e8-ae67-56377ccb3623)
+*After! Check it out, whooo!!!*
+
 ## Contributing
 1. Fork the repository.
 2. Create a new branch:
